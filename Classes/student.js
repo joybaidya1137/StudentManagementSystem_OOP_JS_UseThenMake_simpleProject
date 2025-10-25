@@ -59,12 +59,6 @@ class student extends person{
        console.log(`Average Grade: ${this.getAverageGrade()}`);
 
     }
-
-
-
-
-
-
 }
 
     
