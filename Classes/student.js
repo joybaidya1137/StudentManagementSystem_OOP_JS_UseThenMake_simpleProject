@@ -51,7 +51,7 @@ class student extends person{
     displayInfo(){
        console.log(`Student ID: ${this.#studentID}`);
        super.displayInfo(); 
-       console.log(`Courses Enrolled: ${this.#courses.join(', ')}`); // mean  join method use to separate courses with comma
+       console.log(`Courses Enrolled: ${this.#courses.join(', ')}`); 
        console.log('Grades:');
        for (const [course, grade] of Object.entries(this.#grades)) {
         console.log(`  ${course}: ${grade}`);
@@ -59,7 +59,21 @@ class student extends person{
        console.log(`Average Grade: ${this.getAverageGrade()}`);
 
     }
+
+
+    toJSON(){
+        return {
+            studentID: this.#studentID,
+            name: this.getName(),
+            age: this.getAge(),
+            gender: this.getGender(),
+            courses: this.#courses,
+            grades: this.#grades
+        };
+    }
+
 }
 
+export default student;
     
 
