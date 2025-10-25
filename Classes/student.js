@@ -39,13 +39,31 @@ class student extends person{
             else if (70 > result >= 60) {
                 return 'B';
             }
-            else {
+            else if (60 > result >= 50) {
                 return 'C';
             }
+            else {
+                return 'F';
+            }   
         }
     }
 
-    
+    displayInfo(){
+       console.log(`Student ID: ${this.#studentID}`);
+       super.displayInfo(); 
+       console.log(`Courses Enrolled: ${this.#courses.join(', ')}`); // mean  join method use to separate courses with comma
+       console.log('Grades:');
+       for (const [course, grade] of Object.entries(this.#grades)) {
+        console.log(`  ${course}: ${grade}`);
+       }
+       console.log(`Average Grade: ${this.getAverageGrade()}`);
+
+    }
+
+
+
+
+
 
 }
 
