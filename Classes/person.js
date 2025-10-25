@@ -1,4 +1,4 @@
-class Person {
+class person {
     #name;
     #age;
     #gender;
@@ -26,4 +26,4 @@ class Person {
         console.log(`Gender: ${this.getGender()}`);
     }
 }
-export default Person;
+export default person;
