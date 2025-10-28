@@ -14,6 +14,10 @@ class student extends person{
     
     }
 
+    getStudentID() {
+    return this.#studentID;
+  }
+
     enrollCourse(courseName){
         this.#courses.push(courseName);
     }
