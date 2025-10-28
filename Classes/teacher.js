@@ -9,6 +9,11 @@ class teacher extends person {
         this.#employeeID = employeeID;
     }
 
+    getEmployeeID() {
+        return this.#employeeID;
+
+    }
+
     displayInfo() {
         console.log(`Employee ID: ${this.#employeeID}`);
         super.displayInfo();
@@ -27,3 +32,4 @@ class teacher extends person {
     
 
 }
+export default teacher;
