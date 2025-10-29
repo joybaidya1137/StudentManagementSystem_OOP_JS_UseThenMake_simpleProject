@@ -49,21 +49,46 @@ class management {
 
 
     searchStudentByID(S_ID) {
-        return this.#Students.find(Sr => Sr.getStudentID() === S_ID);
+        const Students = this.#Students.find(Sr => Sr.getStudentID() === S_ID);
+        if (Students !== undefined) {
+            return Students;
+        } else {
+            return null;
+        }
     }
 
     
     searchTeacherByID(T_ID) {
-        return this.#Teachers.find(Tr => Tr.getTeacherID() === T_ID);
+        const Teachers = this.#Teachers.find(Tr => Tr.getTeacherID() === T_ID);
+        if (Teachers !== undefined) {
+            return Teachers;
+        } else {
+            return null;
+        }
+
     }
 
     deleteStudentByID(S_ID) {
-        this.#Students = this.#Students.filter(Sr => Sr.getStudentID() !== S_ID);
+        this.#Students = this.#Students.findIndex(Sr => Sr.getStudentID() !== S_ID);
+        if (this.#Students !== -1) {
+            this.#Students.splice(this.#Students, 1); 
+            console.log(`Student deleted: ${S_ID} and ${Students.getName()} and ${Students.getAge()}`);
+        } else {
+            console.log(`Student not found: ${S_ID}`);
+        }
+
     }
 
     deleteTeacherByID(T_ID) {
         this.#Teachers = this.#Teachers.filter(Tr => Tr.getTeacherID() !== T_ID);
+        if (this.#Teachers !== -1) {
+            this.#Teachers.splice(this.#Teachers, 1); 
+            console.log(`Teacher deleted: ${T_ID} and ${Teachers.getName()} and ${Teachers.getAge()}`);
+        } else {
+            console.log(`Teacher not found: ${T_ID}`);
+        }   
     }
 
 
 }
+export default management;

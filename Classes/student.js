@@ -63,19 +63,6 @@ class student extends person{
        console.log(`Average Grade: ${this.getAverageGrade()}`);
 
     }
-
-
-    toJSON(){
-        return {
-            studentID: this.#studentID,
-            name: this.getName(),
-            age: this.getAge(),
-            gender: this.getGender(),
-            courses: this.#courses,
-            grades: this.#grades
-        };
-    }
-
 }
 
 export default student;

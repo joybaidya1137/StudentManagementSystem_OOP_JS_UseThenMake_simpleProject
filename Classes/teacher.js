@@ -1,4 +1,4 @@
-import person from "./person";  
+import person from "./person.js";  
 
 class teacher extends person {
     #subject;
@@ -19,17 +19,6 @@ class teacher extends person {
         super.displayInfo();
         console.log(`Subject: ${this.#subject}`);
     }
-
-    toJSON() {
-        return {
-            employeeID: this.#employeeID,
-            name: this.getName(),
-            age: this.getAge(),
-            gender: this.getGender(),
-            subject: this.#subject
-        };
-    }
-    
 
 }
 export default teacher;
