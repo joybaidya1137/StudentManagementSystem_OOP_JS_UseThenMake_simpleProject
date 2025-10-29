@@ -1,0 +1,22 @@
+{
+  "name": "studentmanagementsystemoopandjavascriptsimpleproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Main.js",
+  "type": "module",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joybaidya1137/StudentManagementSystem_OOP_JS_UseThenMake_simpleProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joybaidya1137/StudentManagementSystem_OOP_JS_UseThenMake_simpleProject/issues"
+  },
+  "homepage": "https://github.com/joybaidya1137/StudentManagementSystem_OOP_JS_UseThenMake_simpleProject#readme"
+}
